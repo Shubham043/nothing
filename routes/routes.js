@@ -3,6 +3,7 @@ import express from "express";
 import {
     createProfile,
     getProfileById,
+    getAllProfiles,
     updateProfile,
     deleteProfile,
     signIn,
@@ -24,6 +25,9 @@ router.post("/", createProfile);
 
 // Get user profile by ID
 router.get("/:id", getProfileById);
+
+//get all profiles
+router.get('/',getAllProfiles);
 
 // Update user profile by ID
 router.patch("/:id", updateProfile);

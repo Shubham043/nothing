@@ -11,6 +11,10 @@ const profileSchema = new mongoose.Schema({
         default: "youremail@example.com",
         required:true
     },
+    connection:{
+        type:bool,
+        default:false
+    },
     phoneNumber: {
         type: String,
         default: "9999999999",

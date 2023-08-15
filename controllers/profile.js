@@ -102,6 +102,16 @@ export const getProfileById = async (req, res) => {
     }
 };
 
+//get all user by ID
+export const getAllProfiles = async (req, res) => {
+    try {
+        const profiles = await ProfileModel.find();
+        res.json(profiles);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
 // Update user profile by ID
 export const updateProfile = async (req, res) => {
     try {
