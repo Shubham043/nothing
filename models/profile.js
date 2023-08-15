@@ -12,7 +12,7 @@ const profileSchema = new mongoose.Schema({
         required:true
     },
     connection:{
-        type:bool,
+        type:Boolean,
         default:false
     },
     phoneNumber: {
